@@ -20,6 +20,7 @@ namespace CurrencyQuotes.Services
                                 //.Where(o => o.idUser == idUser)
                                 .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
                                 .Take(validFilter.PageSize)
+                                .OrderBy(x => x.name)
                                 .ToList();
             
             var totalRecords = this._context.Quotes.Count();//Where(o => o.idUser == idUser).Count();
