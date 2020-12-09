@@ -29,9 +29,9 @@ namespace CurrencyQuotes.Services
             return pagedReponse;
         }
         
-        public Quotes GetId(int idQuotes){
+        public Quotes GetId(int idCoins){
 
-            var ret = this._context.Quotes.Where(u => u.idQuotes == idQuotes).FirstOrDefault();  
+            var ret = this._context.Quotes.Where(u => u.idCoins == idCoins).FirstOrDefault();  
 
             return ret;
 

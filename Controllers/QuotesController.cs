@@ -34,10 +34,10 @@ namespace CurrencyQuotes.Controllers
             
         }
         
-        [HttpGet("{idQuotes}")]
-        public ActionResult Get(int idQuotes)
+        [HttpGet("{idCoins}")]
+        public ActionResult Get(int idCoins)
         {
-            var ret = this.quotesService.GetId(idQuotes);
+            var ret = this.quotesService.GetId(idCoins);
 
             return Ok(ret);
         }
