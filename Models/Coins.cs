@@ -8,6 +8,8 @@ namespace CurrencyQuotes.Models
     {
         [Key]
         public int idCoins { get; set; }
-        
+        public string code { get; set; }
+        public string codein { get; set; }
+        public string name { get; set; } 
     }
 }

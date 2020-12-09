@@ -13,6 +13,11 @@ using Microsoft.Extensions.Logging;
 using CurrencyQuotes.Data;
 using Microsoft.EntityFrameworkCore;
 
+/*
+https://docs.awesomeapi.com.br/api-de-moedas
+*/
+
+
 namespace CurrencyQuotes
 {
     public class Startup

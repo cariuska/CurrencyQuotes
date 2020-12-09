@@ -11,16 +11,18 @@ namespace CurrencyQuotes.Controllers
     [EnableCors]
     [Route("v1/[controller]")]
     [ApiController]
-    public class QuotesController : Controller
+
+    public class CoinsController : Controller
     {
         private readonly DBContext _context;
-        private QuotesService quotesService; 
+        private CoinsService coinsService; 
 
-        public QuotesController(DBContext context)
+        public CoinsController(DBContext context)
         {
             this._context = context;
-            this.quotesService = new QuotesService(_context);
+            this.coinsService = new CoinsService(_context);
         }
+
 
         [HttpGet]
         public ActionResult Get([FromQuery] PaginationFilter filter)
@@ -28,20 +30,19 @@ namespace CurrencyQuotes.Controllers
 
             var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
             
-            var ret = this.quotesService.List(validFilter);
+            var ret = this.coinsService.List(validFilter);
 
             return Ok(ret);
             
         }
         
-        [HttpGet("{idQuotes}")]
-        public ActionResult Get(int idQuotes)
+        [HttpGet("{idCoins}")]
+        public ActionResult Get(int idCoins)
         {
-            var ret = this.quotesService.GetId(idQuotes);
+            var ret = this.coinsService.GetId(idCoins);
 
             return Ok(ret);
         }
-        
         
     }
 }
