@@ -18,9 +18,6 @@ namespace CurrencyQuotes.Models
             this.PageNumber = pageNumber;
             this.PageSize = pageSize;
             this.Data = data;
-            this.Message = null;
-            this.Succeeded = true;
-            this.Errors = null;
         }
     }
 }

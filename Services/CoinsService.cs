@@ -23,7 +23,7 @@ namespace CurrencyQuotes.Services
                                 .OrderBy(x => x.name)
                                 .ToList();
             
-            var totalRecords = this._context.Quotes.Count();//Where(o => o.idUser == idUser).Count();
+            var totalRecords = this._context.Coins.Count();//Where(o => o.idUser == idUser).Count();
 
             var pagedReponse = PaginationHelper.CreatePagedReponse<Coins>(ret, validFilter, totalRecords);
 
