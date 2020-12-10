@@ -28,6 +28,7 @@ namespace CurrencyQuotes.Services
 
             return pagedReponse;
         }
+      
         
         public Quotes GetId(int idCoins){
 
@@ -35,6 +36,21 @@ namespace CurrencyQuotes.Services
 
             return ret;
 
+        }
+
+
+        public void Add(Quotes quotes){
+
+            var retNew =  this._context.Quotes.Add(quotes);
+            this._context.SaveChanges();
+        }
+
+        public void Alter(Quotes quotes){
+            
+            var ret = GetId(quotes.idCoins);
+            quotes.idQuotes = ret.idQuotes;
+            _context.Entry(ret).CurrentValues.SetValues(quotes);
+            this._context.SaveChanges();
         }
     }
 }
