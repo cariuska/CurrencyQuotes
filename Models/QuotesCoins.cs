@@ -5,17 +5,14 @@ using System.Text.Json.Serialization;
 
 namespace CurrencyQuotes.Models
 {        
-    [TableAttribute("Quotes")]
-    public class Quotes
+    public class QuotesCoins
     {
         [Key]
+        public int idCoins { get; set; }
         public int idQuotes { get; set; }
-
-        [ForeignKey("Coins")]
-        public int idCoins { get; set; }   
-
-        //[JsonIgnoreAttribute]
-        public Coins Coins { get; set; }
+        public string code { get; set; }
+        public string codein { get; set; }
+        public string name { get; set; } 
         public Decimal high { get; set; }
         public Decimal low { get; set; }
         public Decimal varBid { get; set; }

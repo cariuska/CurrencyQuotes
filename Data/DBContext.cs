@@ -9,5 +9,6 @@ namespace CurrencyQuotes.Data
 
         public DbSet<Quotes> Quotes { get; set; }
         public DbSet<Coins> Coins { get; set; }
+        public DbSet<QuotesCoins> QuotesCoins { get; set; }
     }
 }
