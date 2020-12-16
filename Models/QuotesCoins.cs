@@ -13,6 +13,7 @@ namespace CurrencyQuotes.Models
         public string code { get; set; }
         public string codein { get; set; }
         public string name { get; set; } 
+        public string symbol { get; set; } 
         public Decimal high { get; set; }
         public Decimal low { get; set; }
         public Decimal varBid { get; set; }
